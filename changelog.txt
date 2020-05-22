@@ -1,0 +1,1 @@
+22/05/2020 - create folder repositories with all requirement files of the project including: readme.txt, changelog.txt, licenses.txt and source code folder

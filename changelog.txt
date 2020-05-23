@@ -1,1 +1,2 @@
 22/05/2020 - create folder repositories with all requirement files of the project including: readme.txt, changelog.txt, licenses.txt and source code folder
+23/05/2020 - create firebase account, add firebase to my application, create sign up function and login function for my app

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "783641470079",
+    "firebase_url": "https://sit305-assesment-2.firebaseio.com",
+    "project_id": "sit305-assesment-2",
+    "storage_bucket": "sit305-assesment-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783641470079:android:634e7fe7cd785aa4f74b4a",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783641470079-9bo4ah8kofr8lsbsdg7r8nsb2kpgteci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX8J0tgB9CT4yj4F3KhCh2NtGdeGrT058"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783641470079-9bo4ah8kofr8lsbsdg7r8nsb2kpgteci.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

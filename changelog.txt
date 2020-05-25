@@ -1,3 +1,4 @@
 22/05/2020 - create folder repositories with all requirement files of the project including: readme.txt, changelog.txt, licenses.txt and source code folder
 23/05/2020 - create firebase account, add firebase to my application, create sign up function and login function for my app
 24/05/2020 - create sign up function and forget password activity to create user account- need to verify email, user can reset their password
+25/05/2020 - design UI for sign up page, log in page, edit some user's identity function such as remember me, forgot password and verify user email, update data store on firebase

@@ -102,12 +102,9 @@ public class MainActivity extends AppCompatActivity {
                                             DocumentSnapshot document = task.getResult();
                                             if (document.exists()) {
                                                 String username = document.getString("UserName");
-                                                if (username.equals("Khai")) {
-                                                    startActivity(new Intent(getApplicationContext(), Contact.class));
-                                                }
-                                                else {
-                                                    startActivity(new Intent(getApplicationContext(), HomePage.class));
-                                                }
+
+                                                    startActivity(new Intent(getApplicationContext(), Homepage.class));
+
                                             }
                                         }
                                     }

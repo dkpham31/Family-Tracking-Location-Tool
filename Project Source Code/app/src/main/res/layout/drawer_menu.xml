@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+        <group android:checkableBehavior="single">
+            <item android:id="@+id/home"
+                android:title="Home"/>
+            <item android:id="@+id/expedition"
+                android:title="Expedition"/>
+            <item android:id="@+id/blog"
+                android:title="My Blog"/>
+            <item android:id="@+id/contact"
+                android:title="Contact Us"/>
+            <item android:id="@+id/donate"
+                android:title="Donate"/>
+            <item android:id="@+id/signout"
+                android:title="Sign Out"/>
+        </group>
+
+</menu>

@@ -4,7 +4,7 @@
 25/05/2020 - design UI for sign up page, log in page, edit some user's identity function such as remember me, forgot password and verify user email, update data store on firebase
 26/05/2020 - edit, redesign and change color of sign up/ login page, create a navigation bar on homepage, start designing and adding functions on homepage, create a sign out button
 27/05/2020 - recoding the home screen page and register page, arrange all files in folders which are activities, fragments, services, and so on,... still working on those so I can not commit the code today	
-28/05/2020
+28/05/2020 - working on redesigning all UI interface
 29/05/2020
 30/05/2020
 31/05/2020

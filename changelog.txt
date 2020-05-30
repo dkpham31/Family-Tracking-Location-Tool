@@ -6,5 +6,5 @@
 27/05/2020 - recoding the home screen page and register page, arrange all files in folders which are activities, fragments, services, and so on,... still working on those so I can not commit the code today	
 28/05/2020 - working on redesigning all UI interface
 29/05/2020
-30/05/2020
+30/05/2020 - drawing wireframes for all UI design pages, not yet finish, drawed 4/8 pages
 31/05/2020

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".activities.InviteCodeActivity">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textColor="#000"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:text="Share this invite code with the people you want in your circle"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:fontFamily="monospace"
+            android:layout_marginTop="42dp"
+            android:text="XXXXXX" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:text="Share your code out loud or send it in a message"
+            />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            style="@style/Button1"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:onClick="registerUser"
+            android:text="Register"
+            android:id="@+id/registerButton"
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:layout_marginStart="8dp"
+
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

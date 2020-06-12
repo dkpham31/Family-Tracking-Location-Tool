@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Family GPS Tracking Tool.iml" filepath="$PROJECT_DIR$/../Family GPS Tracking Tool.iml" group="Family GPS Tracking Tool" />
+      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="Family GPS Tracking Tool/app" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "75748699373",
+    "firebase_url": "https://famtracker-e8cb1.firebaseio.com",
+    "project_id": "famtracker-e8cb1",
+    "storage_bucket": "famtracker-e8cb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75748699373:android:8f25739ff9e62f3bac70e4",
+        "android_client_info": {
+          "package_name": "com.haroonstudios.familygpstracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75748699373-fhfj33es7orbqpjvn02bo5dgktrng95k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz_zgw8_HEzjlVhINpRXZ-hupExJERwwU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75748699373-fhfj33es7orbqpjvn02bo5dgktrng95k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

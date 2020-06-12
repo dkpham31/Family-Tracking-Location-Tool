@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".activities.SplashActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/imageView"
+        android:src="@drawable/app_icon"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="30dp"
+        android:text="Familly Tracking"
+        android:textSize="32sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:id="@+id/titleTxt"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTxt"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="With us! You track your familly members"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        ></TextView>
+
+
+</RelativeLayout>

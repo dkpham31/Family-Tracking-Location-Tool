@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">FamTrack</string>
+    <string name="text_signin_signup">Don\'t have an account? <b>Sign up</b></string>
+    <string name="text_signup_message">Hello, let\'s set up your account</string>
+    <string name="text_signup_terms">By signing up, you agree to our <b>terms and conditions</b></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="privacy_policy_url">https://famtracker-family-t.flycricket.io/privacy.html</string>
+    <string name="maps_api">AIzaSyCO8DMIWoYvO3TsX6L4c830-ZV_2L1dRmQ</string>
+
+
+    <array name="tab_colors">
+        <item name="tab_1">@color/colorPrimary</item>
+        <item name="tab_2">@color/colorPrimary</item>
+        <item name="tab_3">@color/colorPrimary</item>
+        <item name="tab_4">@color/colorPrimary</item>
+        <item name="tab_5">@color/colorPrimary</item>
+    </array>
+
+
+
+
+    <string name="publisher_id">pub-3558407953623804</string>
+    <string name="ADS_APP_ID">ca-app-pub-3558407953623804~3061345630</string>
+
+    <string name="ADS_BANNER_UNIT_ID">ca-app-pub-3558407953623804/5534986808</string>
+    <string name="ADS_INTERSTITIAL_UNIT_ID">ca-app-pub-3558407953623804/9243610601</string>
+</resources>

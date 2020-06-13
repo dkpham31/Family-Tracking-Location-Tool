@@ -138,8 +138,9 @@ public class LocationShareService extends Service implements LocationListener, G
     }
 
     @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
+    public void onLocationChanged(Location location) {
+        latLngCurrent = new LatLng(location.getLatitude(), location.getLongitude());
+        shareLocation();
     }
 
     @Override
@@ -148,11 +149,9 @@ public class LocationShareService extends Service implements LocationListener, G
     }
 
     @Override
-    public void onLocationChanged(Location location) {
-        latLngCurrent = new LatLng(location.getLatitude(), location.getLongitude());
-        shareLocation();
-    }
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
+    }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -193,7 +192,6 @@ public class LocationShareService extends Service implements LocationListener, G
                     }
                 });
     }
-
 
     @Override
     public void onDestroy() {

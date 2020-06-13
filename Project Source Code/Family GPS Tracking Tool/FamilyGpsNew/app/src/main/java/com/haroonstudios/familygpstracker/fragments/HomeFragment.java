@@ -312,11 +312,6 @@ public class HomeFragment extends RootFragment implements OnMapReadyCallback,
     }
 
 
-
-
-
-
-
     public boolean isServiceRunning(Context c, Class<?> serviceClass)
     {
         ActivityManager activityManager = (ActivityManager)c.getSystemService(Context.ACTIVITY_SERVICE);

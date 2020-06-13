@@ -193,14 +193,6 @@ public class MyCircleFragment extends RootFragment
         }
     }
 
-
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.menu_refresh_mycircle, menu);
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -214,5 +206,11 @@ public class MyCircleFragment extends RootFragment
                     (this).commit();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_refresh_mycircle, menu);
     }
 }

@@ -12,39 +12,39 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="78dp"
+        android:background="#DCDCDC"
         android:orientation="vertical"
         android:padding="14dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="10"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="10">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="0dp"
                 android:id="@+id/item_imageprofile"
+                android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="2"
-                android:src="@drawable/defaultprofile"
-                />
+                android:src="@drawable/defaultprofile" />
 
             <TextView
                 android:id="@+id/item_title"
                 android:layout_width="0dp"
-                android:layout_weight="7"
                 android:layout_height="wrap_content"
-                android:text="Dubai"
-                android:textStyle="bold"
+                android:layout_weight="7"
                 android:padding="10dp"
-                android:textSize="22sp" />
+                android:text="Name"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
             <ImageView
+                android:id="@+id/item_image"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                android:id="@+id/item_image"
                 android:src="@drawable/redoffline"
 
 

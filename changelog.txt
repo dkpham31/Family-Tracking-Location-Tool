@@ -13,3 +13,7 @@
 11/06/2020 - fix out the cirle share id and the cirle join id, start editting all UI interface again
 12/06/2020 - almost done all redesign UI interface, fragment, complete service Location share service, broadcast receiver
 	   - adding image and crop image into register activity, redesign coulor of splash view, change time delay from 2000 to 3000
+13/06/2020 - design new logo for app, change background color (#000000, #FFF, #DCDCDC)
+	   - fix location tracking and sharing id in circle, edit text messages with politer comments
+	   - resize and arrange all fragments in Live_map fragment , homepage fragment and my circle fragment
+	   - fix it out the background and the form for user form in My circle page

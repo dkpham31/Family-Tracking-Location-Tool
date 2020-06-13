@@ -9,12 +9,11 @@
 
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:id="@+id/imageView"
-        android:src="@drawable/app_icon"
-        />
+        android:src="@drawable/app_icon" />
 
 
     <TextView
@@ -22,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_marginTop="30dp"
-        android:text="Familly Tracking"
+        android:text="Family Tracking"
         android:textSize="32sp"
         android:textColor="#000000"
         android:textStyle="bold"
@@ -36,7 +35,7 @@
         android:layout_below="@+id/titleTxt"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="With us! You track your familly members"
+        android:text="With us! You track your family members"
         android:textStyle="bold"
         android:textSize="20sp"
         android:textColor="#000000"

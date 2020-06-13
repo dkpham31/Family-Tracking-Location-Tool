@@ -8,9 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.google.ads.mediation.admob.AdMobAdapter;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -39,7 +36,7 @@ public class LiveMapActivity extends AppCompatActivity implements OnMapReadyCall
 
 
     @BindView(R.id.toolbarLiveMap) Toolbar toolbar;
-    @BindView(R.id.adView) AdView adView;
+
     GoogleMap mMap;
     LatLng friendLatLng;
     String latitude,longitude,name,userid,prevdate,prevImage,myImage,myName,myLat,myLng,myDate;
@@ -56,9 +53,6 @@ public class LiveMapActivity extends AppCompatActivity implements OnMapReadyCall
         setContentView(R.layout.activity_live_map);
         ButterKnife.bind(this);
         MyGDPR.updateConsentStatus(LiveMapActivity.this);
-
-        adView.loadAd(new AdRequest.Builder()
-                .addNetworkExtrasBundle(AdMobAdapter.class, MyGDPR.getBundleAd(LiveMapActivity.this)).build());
         mKeys = new ArrayList<>();
         Intent intent = getIntent();
 

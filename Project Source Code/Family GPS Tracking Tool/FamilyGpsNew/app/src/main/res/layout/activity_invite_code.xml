@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+    android:background="@color/white"
     tools:context=".activities.InviteCodeActivity">
 
 
@@ -19,14 +19,14 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:textColor="#000"
             android:gravity="center_horizontal"
-            android:textStyle="bold"
-            android:text="Share this invite code with the people you want in your circle"
-            android:textSize="18sp" />
+            android:text="Share this invite code with your family members"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView4"
@@ -47,7 +47,7 @@
             android:textColor="#000"
             android:layout_marginTop="20dp"
             android:textStyle="bold"
-            android:text="Share your code out loud or send it in a message"
+            android:text="Share your code in a message or out loud"
             />
 
         <Button

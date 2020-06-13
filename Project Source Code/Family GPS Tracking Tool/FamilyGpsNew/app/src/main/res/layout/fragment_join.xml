@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg">
+    android:background="@color/white">
 
 
     <LinearLayout
@@ -22,7 +22,7 @@
             android:text="Enter username to join circle"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="#fff"
+            android:textColor="#000"
             />
 
 
@@ -71,7 +71,7 @@
             android:gravity="center"
             android:text="Ask your friends for their username"
             android:layout_gravity="center"
-            android:textColor="#fff"
+            android:textColor="#000"
              />
 
         <Button

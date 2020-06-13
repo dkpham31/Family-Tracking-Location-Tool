@@ -4,7 +4,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground">
+    android:background="@color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,8 +19,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="200dp"
-                android:layout_height="150dp"
+                android:layout_width="162dp"
+                android:layout_height="155dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="32dp"
                 app:srcCompat="@drawable/app_icon" />

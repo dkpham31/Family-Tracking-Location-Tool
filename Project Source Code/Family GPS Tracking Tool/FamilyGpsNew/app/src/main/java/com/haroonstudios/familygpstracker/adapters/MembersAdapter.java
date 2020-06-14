@@ -34,6 +34,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.MembersViewHolder>
 {
 
+    // declare an array to store all user name on it, create name list, easy for user to watch their current location sharing of user
     ArrayList<User> nameList;
     MyCircleFragment myCircleFragment;
     Context context;
@@ -42,6 +43,7 @@ public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.MembersV
     DatabaseReference mReference,mJoinedRef;
 
 
+    // adding user name on a name list, sending information to Firebase
     public MembersAdapter(ArrayList<User> nameList, MyCircleFragment myCircleFragment, Context context)
     {
         this.nameList = nameList;
@@ -67,6 +69,7 @@ public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.MembersV
         return membersViewHolder;
     }
 
+    // show on my circle page that green is user sharing location and red is user not sharing their location
     @Override
     public void onBindViewHolder(MembersViewHolder holder, int position) {
 
@@ -74,10 +77,12 @@ public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.MembersV
         holder.name_txt.setText(addCircle.name);
         Picasso.get().load(addCircle.profile_image).placeholder(R.drawable.defaultprofile).into(holder.circleImageView);
 
+        // red offline sharing location
         if(addCircle.issharing.equals("false"))
         {
             holder.i1.setImageResource(R.drawable.redoffline);
         }
+        // green online sharing location
         else
         {
             holder.i1.setImageResource(R.drawable.green);
@@ -95,6 +100,7 @@ public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.MembersV
         CircleImageView circleImageView;
 
 
+        // get the position on the user you have already added
         public MembersViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
@@ -113,6 +119,7 @@ public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.MembersV
 
 
 
+        // add or remove user on my circle page
         @Override
         public boolean onMenuItemClick(MenuItem item) {
 
@@ -147,6 +154,7 @@ public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.MembersV
             return false;
         }
 
+        // remove a user on my circle page
         @Override
         public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
             MenuItem myActionItem = menu.add("Remove");

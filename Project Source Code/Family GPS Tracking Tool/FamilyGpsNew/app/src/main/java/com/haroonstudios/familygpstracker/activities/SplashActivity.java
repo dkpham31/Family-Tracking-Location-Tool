@@ -12,12 +12,14 @@ import java.util.TimerTask;
 
 public class SplashActivity extends AppCompatActivity {
 
+    // splash view function
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
 
+        // set up time and schedule it whenever user open the app
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -33,6 +35,6 @@ public class SplashActivity extends AppCompatActivity {
                     }
                 });
             }
-        }, 3000);
+        }, 3000);   // set the delay time to 3000ms before going to Main activity
     }
 }

@@ -18,9 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.ads.mediation.admob.AdMobAdapter;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -54,7 +52,7 @@ public class MyCircleFragment extends RootFragment
     String memberUserId;
     MembersAdapter adapter;
 
-    InterstitialAd interstitialAd;
+
 
     @Nullable
     @Override
@@ -69,13 +67,6 @@ public class MyCircleFragment extends RootFragment
         ButterKnife.bind(this,view);
         setHasOptionsMenu(true);
 
-
-        interstitialAd = new InterstitialAd(getContext());
-        interstitialAd.setAdUnitId(getActivity().getResources().getString(R.string.ADS_INTERSTITIAL_UNIT_ID));
-
-        AdRequest adRequestInterstitial = new AdRequest.Builder()
-                .addNetworkExtrasBundle(AdMobAdapter.class, MyGDPR.getBundleAd(getActivity())).build();
-        interstitialAd.loadAd(adRequestInterstitial);
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
@@ -140,30 +131,9 @@ public class MyCircleFragment extends RootFragment
     {
         final User addCircle = nameArrayList.get(pos);
 
-        if(interstitialAd.isLoaded())
-        {
-            interstitialAd.show();
-            interstitialAd.setAdListener(new AdListener()
-            {
-                @Override
-                public void onAdClosed() {
-                    super.onAdClosed();
-                    AdRequest adRequestInterstitial = new AdRequest.Builder()
-                            .addNetworkExtrasBundle(AdMobAdapter.class, MyGDPR.getBundleAd(getActivity())).build();
-                    interstitialAd.loadAd(adRequestInterstitial);
-                    openAct(addCircle);
-                }
-            });
 
-        }
-        else
-        {
+
             openAct(addCircle);
-            AdRequest adRequestInterstitial = new AdRequest.Builder()
-                    .addNetworkExtrasBundle(AdMobAdapter.class, MyGDPR.getBundleAd(getActivity())).build();
-            interstitialAd.loadAd(adRequestInterstitial);
-        }
-
 
 
 

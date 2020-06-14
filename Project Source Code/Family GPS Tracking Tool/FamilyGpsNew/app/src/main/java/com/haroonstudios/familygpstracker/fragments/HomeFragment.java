@@ -54,13 +54,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.haroonstudios.familygpstracker.R;
 import com.haroonstudios.familygpstracker.services.LocationShareService;
 
-
 import java.util.List;
 
 public class HomeFragment extends RootFragment implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks
         , GoogleApiClient.OnConnectionFailedListener, LocationListener, ResultCallback {
 
+    // declare the mMap using google map, marker with latitude and longitude, database Reference on Firebase authentity and user
     GoogleMap mMap;
     GoogleApiClient client;
     LocationRequest request;
@@ -76,6 +76,7 @@ public class HomeFragment extends RootFragment implements OnMapReadyCallback,
         return view;
     }
 
+    // display support map
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -89,6 +90,7 @@ public class HomeFragment extends RootFragment implements OnMapReadyCallback,
 
     }
 
+    // call API location services
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -103,6 +105,7 @@ public class HomeFragment extends RootFragment implements OnMapReadyCallback,
         client.connect();
     }
 
+    // check permission for the locaiton services displayed the map
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         request = new LocationRequest().create();
@@ -265,6 +268,7 @@ public class HomeFragment extends RootFragment implements OnMapReadyCallback,
     }
 
 
+    // 2 case for user. case1 user sharing their location and case2 user stop sharing with notice messages as well
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

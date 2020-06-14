@@ -10,6 +10,7 @@ import com.haroonstudios.familygpstracker.utils.OnBackPressListener;
 
 public class RootFragment extends Fragment implements OnBackPressListener {
 
+    // give all fragment resume, visible, oncreate as false in the beginning
     private boolean fragmentResume =false;
     private boolean fragmentVisible =false;
     private boolean fragmentOnCreated =false;

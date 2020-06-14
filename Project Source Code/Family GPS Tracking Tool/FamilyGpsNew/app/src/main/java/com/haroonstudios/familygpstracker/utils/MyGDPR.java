@@ -17,6 +17,8 @@ import java.net.URL;
 
 public class MyGDPR {
 
+    // I planned to add some add view to earn money for the app, that's why I create MyGDPR activity however it will distract user while using, so I dont put it in my code now
+    // Maybe I will use it in the future, but for now, I dont
     public static Bundle getBundleAd(Activity act) {
         Bundle extras = new Bundle();
         ConsentInformation consentInformation = ConsentInformation.getInstance(act);

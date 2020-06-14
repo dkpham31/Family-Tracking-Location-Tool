@@ -1,9 +1,7 @@
 package com.haroonstudios.familygpstracker.models;
 
-/**
- * Created by Haroon on 12/23/2017.
- */
 
+// return the circle member id
 public class CircleJoin
 {
     public String circlememberid;

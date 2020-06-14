@@ -14,6 +14,7 @@ public class BackPressImpl implements OnBackPressListener {
         this.parentFragment = parentFragment;
     }
 
+    // press back button to back to the previous fragment
     @Override
     public boolean onBackPressed() {
 
@@ -38,6 +39,7 @@ public class BackPressImpl implements OnBackPressListener {
         }
     }
 
+    // return root fragment of the parent fragment
     @Override
     public RootFragment getFragment() {
         return (RootFragment) parentFragment;

@@ -5,6 +5,7 @@ import android.app.Application;
 import com.google.android.gms.ads.MobileAds;
 import com.haroonstudios.familygpstracker.R;
 
+// just create for adding some advisement in the future, you can ignore it
 public class MyApp extends Application
 {
     @Override

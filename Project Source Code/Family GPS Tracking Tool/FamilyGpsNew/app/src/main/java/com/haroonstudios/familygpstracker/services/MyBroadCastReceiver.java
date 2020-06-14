@@ -7,6 +7,7 @@ import android.content.Intent;
 public class MyBroadCastReceiver extends BroadcastReceiver
 {
 
+    // start running Location share service
     @Override
     public void onReceive(Context context, Intent intent) {
 

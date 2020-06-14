@@ -35,8 +35,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class LiveMapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
 
+    // declare bindview for toolbar in live map
     @BindView(R.id.toolbarLiveMap) Toolbar toolbar;
 
+    // declare for the mMap wiht using support from google map api, latitude, longitude and all user information. declare the marker and its option as well
     GoogleMap mMap;
     LatLng friendLatLng;
     String latitude,longitude,name,userid,prevdate,prevImage,myImage,myName,myLat,myLng,myDate;
@@ -75,9 +77,11 @@ public class LiveMapActivity extends AppCompatActivity implements OnMapReadyCall
 
         }
 
+        // sending location of users to Firebase
         reference = FirebaseDatabase.getInstance().getReference().child("Users").child(userid);
 
 
+        // get the current point on map view
         SupportMapFragment mapFragment =  (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
@@ -86,6 +90,7 @@ public class LiveMapActivity extends AppCompatActivity implements OnMapReadyCall
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
             }
 
+            // find the marker
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
 
@@ -149,6 +154,7 @@ public class LiveMapActivity extends AppCompatActivity implements OnMapReadyCall
 
 
 
+    // set up for the google map view on fragment
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -183,6 +189,7 @@ public class LiveMapActivity extends AppCompatActivity implements OnMapReadyCall
             }
         });
 
+        // identify the latitude and longitude of the location to save as marker
         friendLatLng = new LatLng(Double.parseDouble(latitude),Double.parseDouble(longitude));
         MarkerOptions optionsnew = new MarkerOptions();
 
@@ -201,6 +208,7 @@ public class LiveMapActivity extends AppCompatActivity implements OnMapReadyCall
         }
 
 
+        // move camera for zoom in or out
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(friendLatLng,15));
 
 

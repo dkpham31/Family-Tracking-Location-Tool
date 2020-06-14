@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class PagerAdapter extends FragmentPagerAdapter
 {
 
+    // declare array list which is the name list of users
     private ArrayList<Fragment> fragments = new ArrayList<>();
     private Fragment currentFragment;
     private Context mCxt;
@@ -27,30 +28,32 @@ public class PagerAdapter extends FragmentPagerAdapter
 
         mCxt = context;
 
+        // clear all fragments
         fragments.clear();
 
+        // add home fragment
         HomeFragment homeFragmentFragment = new HomeFragment();
         homeFragmentFragment.setTitle("Home");
 
         fragments.add(homeFragmentFragment);
 
+        // add join fragment
         JoinFragment joinFragment = new JoinFragment();
         joinFragment.setTitle("Join Circle");
 
         fragments.add(joinFragment);
 
 
+        // add my circle fragment
         MyCircleFragment myCircleFragment = new MyCircleFragment();
         myCircleFragment.setTitle("My Circle");
         fragments.add(myCircleFragment);
 
+        // add invite friends fragment
         InviteFriendsFragment inviteFriendsFragment = new InviteFriendsFragment();
         inviteFriendsFragment.setTitle("Invite Friends");
 
         fragments.add(inviteFriendsFragment);
-
-
-
 
     }
 
@@ -74,6 +77,7 @@ public class PagerAdapter extends FragmentPagerAdapter
     }
 
 
+    // back to the current fragment
     public Fragment getCurrentFragment() {
         return currentFragment;
     }

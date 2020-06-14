@@ -33,10 +33,12 @@ import butterknife.ButterKnife;
 
 public class JoinFragment extends RootFragment
 {
+    // declare username join and join button as bind view
     @BindView(R.id.username_join)
     TextInputEditText editTextUsername;
     @BindView(R.id.joinBtn) Button joinButton;
 
+    // declare for Firebase data
     DatabaseReference reference;
     FirebaseAuth auth;
     FirebaseUser user;
@@ -69,6 +71,7 @@ public class JoinFragment extends RootFragment
         user = auth.getCurrentUser();
         progressDialog = new ProgressDialog(getContext());
 
+        // using child users with data snap shot is username to help join to join the circle
         reference = FirebaseDatabase.getInstance().getReference().child("Users");
 
 
@@ -81,6 +84,7 @@ public class JoinFragment extends RootFragment
 
             }
 
+            // display error message if have some error with database
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -89,12 +93,14 @@ public class JoinFragment extends RootFragment
 
 
 
+        // make sure that user can not add themself in My circle fragment
         joinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 currentUserId = user.getUid();
 
 
+                // show them message that can not add yourself and else will join the circle
                 if(currentUsername.equals(editTextUsername.getText().toString()))
                 {
                     Toast.makeText(getContext(),"You cannot add yourself",Toast.LENGTH_LONG).show();
@@ -111,6 +117,7 @@ public class JoinFragment extends RootFragment
         });
     }
 
+    // show dialog to notice that users are joining the circle with the child is username
     private void join()
     {
         progressDialog.setTitle("Joining");
@@ -146,6 +153,9 @@ public class JoinFragment extends RootFragment
                     CircleJoin circleJoin = new CircleJoin(currentUserId);
                     final CircleJoin circleJoin1 = new CircleJoin(joinUserId);
 
+                    // in case that if users joined successful, send them a successful messages
+                    // in case that if users dismiss, send them an error messages
+                    // in case that if users input an invalid username, send them an error messages
                     circleReference.child(user.getUid()).setValue(circleJoin)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
@@ -187,6 +197,7 @@ public class JoinFragment extends RootFragment
                 }
             }
 
+            // show user a dialog error messages for an error of database
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 progressDialog.dismiss();

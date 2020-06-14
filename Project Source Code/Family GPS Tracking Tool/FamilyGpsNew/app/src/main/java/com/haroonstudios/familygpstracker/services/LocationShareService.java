@@ -42,6 +42,7 @@ public class LocationShareService extends Service implements LocationListener, G
     public LocationShareService() {
     }
 
+    // same declare as Live map activity
     GoogleApiClient client;
     LocationRequest request;
     LatLng latLngCurrent;
@@ -58,6 +59,7 @@ public class LocationShareService extends Service implements LocationListener, G
 
     }
 
+    // get the current location of users on Firebase realtime database with child Users
     @Override
     public void onCreate() {
         super.onCreate();
@@ -88,6 +90,7 @@ public class LocationShareService extends Service implements LocationListener, G
 
     }
 
+    // show the notifications
     private void displayNotifications()
     {
 
@@ -105,6 +108,7 @@ public class LocationShareService extends Service implements LocationListener, G
         PendingIntent pendingIntent = PendingIntent.getActivity(this,0,notificationIntent,0);
 
 
+        // check the SDK version and send the content for the users to know they are sharing their location or stop sharing
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel notificationChannel = new NotificationChannel("channelid1", String.valueOf(download_id), NotificationManager.IMPORTANCE_DEFAULT);
@@ -170,6 +174,8 @@ public class LocationShareService extends Service implements LocationListener, G
         return START_NOT_STICKY;
     }
 
+    // sending and receiving the data real time from Firebase including issharing, date, longitude, and latitude
+    // send a message if have an error, could not share location
     public void shareLocation()
     {
         Date date = new Date();
@@ -193,6 +199,7 @@ public class LocationShareService extends Service implements LocationListener, G
                 });
     }
 
+    // close service location sharing when user stop sharing or got an error
     @Override
     public void onDestroy() {
 

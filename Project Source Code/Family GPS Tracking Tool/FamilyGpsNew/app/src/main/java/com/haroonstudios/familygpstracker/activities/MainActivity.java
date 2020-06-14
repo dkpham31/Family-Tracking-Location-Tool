@@ -34,9 +34,11 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
 
+    // declare for edit text of email and password
     @BindView(R.id.et_email) EditText editTextEmail;
     @BindView(R.id.et_password) EditText editTextPassword;
 
+    // declare for Firebase data and dialog for notification
     FirebaseAuth auth;
     FirebaseUser user;
     ProgressDialog dialog;
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
+        // check permission of user to access to the homepage
         if(user == null)
         {
             setContentView(R.layout.activity_main);
@@ -73,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // start register activity
     public void getStarted_click(View v)
     {
             Intent myintent = new Intent(MainActivity.this, RegisterActivity.class);
@@ -84,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
             loginFinally();
     }
 
+    // login function finally complete when all requirement of email, password, username, and so on are true
     private void loginFinally()
     {
         if(!editTextEmail.equals("") && !editTextPassword.equals("") && editTextPassword.length()>=6)
@@ -106,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                                 finish();
 
                             }
+                            // login fail notification
                             else
                             {
 
@@ -116,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
         }
+        // requirement of password
         else
         {
             dialog.dismiss();
@@ -124,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    // forgot password function, reset password through email
     public void forgotPassword(View v)
     {
         final EditText taskEditText = new EditText(MainActivity.this);
@@ -164,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    // check permission of user for login
     private boolean checkPermissions() {
         int result;
         List<String> listPermissionsNeeded = new ArrayList<>();

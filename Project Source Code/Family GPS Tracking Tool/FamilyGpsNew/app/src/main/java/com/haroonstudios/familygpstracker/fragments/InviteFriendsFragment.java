@@ -26,9 +26,11 @@ import butterknife.ButterKnife;
 
 public class InviteFriendsFragment extends RootFragment
 {
+    // declare text view and button as bind view
     @BindView(R.id.textView4) TextView textViewCode;
     @BindView(R.id.shareButton) Button shareButton;
 
+    // database reference for authentity and user on Firebase
     DatabaseReference reference;
     FirebaseAuth auth;
     FirebaseUser firebaseUser;
@@ -55,6 +57,7 @@ public class InviteFriendsFragment extends RootFragment
                 textViewCode.setText(user_code);
             }
 
+            // error message when database has an error
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Toast.makeText(getContext(),"Could not fetch circle code",Toast.LENGTH_LONG).show();
@@ -62,6 +65,7 @@ public class InviteFriendsFragment extends RootFragment
         });
 
 
+        // message for clicking on share button
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

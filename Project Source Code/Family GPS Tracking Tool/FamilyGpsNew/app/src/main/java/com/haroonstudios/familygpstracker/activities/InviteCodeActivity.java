@@ -34,14 +34,17 @@ import butterknife.ButterKnife;
 
 public class InviteCodeActivity extends AppCompatActivity {
 
+    // declare bindview for text view and button register
     @BindView(R.id.textView4) TextView textViewUsername;
     @BindView(R.id.registerButton) Button registerButton;
 
+    // declare string for user information, set usernamefound as false for the beginning
     String email,username,name,phone,password;
     Uri imageUri;
     boolean isUsernameFound = false;
 
 
+    // declare Firebase data and the dialog for the notification
     DatabaseReference reference;
     FirebaseAuth auth;
     FirebaseUser firebaseUser;
@@ -68,11 +71,13 @@ public class InviteCodeActivity extends AppCompatActivity {
             textViewUsername.setText(username);
         }
 
+        // sending user information input to Firebase
         auth = FirebaseAuth.getInstance();
         reference = FirebaseDatabase.getInstance().getReference().child("Users");
 
         Query query = reference.orderByChild("username").equalTo(username);
 
+        // check if username is found or not and return true/ false value
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -87,12 +92,14 @@ public class InviteCodeActivity extends AppCompatActivity {
                     }
             }
 
+            // cancell register if have some error with database
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 registerButton.setVisibility(View.VISIBLE);
             }
         });
 
+        // sending realtime data of user's image
         firebaseStorageReference = FirebaseStorage.getInstance().getReference().child("Profile_images");
     }
 
@@ -121,6 +128,7 @@ public class InviteCodeActivity extends AppCompatActivity {
     }
 
 
+    // basic register for user with all basic information such as name, email, phone, password and image. Also have some message dialog to let user know they are doing wrong or not and successfull message
     public void register()
     {
         auth.createUserWithEmailAndPassword(email, password)

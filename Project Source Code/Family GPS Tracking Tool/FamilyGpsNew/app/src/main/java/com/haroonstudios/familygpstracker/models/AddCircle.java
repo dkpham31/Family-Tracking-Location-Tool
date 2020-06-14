@@ -1,9 +1,7 @@
 package com.haroonstudios.familygpstracker.models;
 
-/**
- * Created by Haroon on 12/22/2017.
- */
 
+// declare all values which add circle had
 public class AddCircle
 {
     public AddCircle(String name, String issharing, String lat, String lng,String profileImage) {

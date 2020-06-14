@@ -1,7 +1,7 @@
 package com.haroonstudios.familygpstracker.models;
 
 
-
+// declare all values of users- just for have a better look
 public class User
 {
     public String name;

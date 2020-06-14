@@ -22,3 +22,7 @@
 	   - fix location tracking and sharing id in circle, edit text messages with politer comments
 	   - resize and arrange all fragments in Live_map fragment , homepage fragment and my circle fragment
 	   - fix it out the background and the form for user form in My circle page
+14/06/2020 - comments explain for all codes
+	   - debug and fix some bugs on sharing and services of lacation sharing, all codes worked well
+	   - check all data on FireBase and real time data, edit some database comments of register and join circle fragment
+	   - check all UI and all features last time before submittion

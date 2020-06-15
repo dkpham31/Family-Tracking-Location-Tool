@@ -26,3 +26,5 @@
 	   - debug and fix some bugs on sharing and services of lacation sharing, all codes worked well
 	   - check all data on FireBase and real time data, edit some database comments of register and join circle fragment
 	   - check all UI and all features last time before submittion
+15/06/2020 - write proposal, project overview and the source for the logo and image
+	   - edit the design images and sketches.

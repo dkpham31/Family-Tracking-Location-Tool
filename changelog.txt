@@ -28,3 +28,6 @@
 	   - check all UI and all features last time before submittion
 15/06/2020 - write proposal, project overview and the source for the logo and image
 	   - edit the design images and sketches.
+16/06/2020 - review and edit some information in Proposal
+17/06/2020 - wrote soucres for images and logo in licenses.txt
+	   - record a demo video

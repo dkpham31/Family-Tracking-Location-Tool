@@ -81,7 +81,7 @@ public class MyCircleFragment extends RootFragment
         adapter = new MembersAdapter(nameList,MyCircleFragment.this,getContext());
         recyclerView.setAdapter(adapter);
 
-
+        //display also added account in My Circle with images, usernames, and status of users
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -119,6 +119,7 @@ public class MyCircleFragment extends RootFragment
 
             }
 
+            // show error message
             @Override
             public void onCancelled(DatabaseError databaseError) {
             Toast.makeText(getContext(),""+databaseError,Toast.LENGTH_LONG).show();
@@ -127,6 +128,7 @@ public class MyCircleFragment extends RootFragment
     }
 
 
+    //open the map to track the location of user if they are sharing
     public void openLiveActivity(final int pos, final ArrayList<User> nameArrayList)
     {
         final User addCircle = nameArrayList.get(pos);
@@ -139,6 +141,7 @@ public class MyCircleFragment extends RootFragment
 
     }
 
+    //dis play message if user is red status
     private void openAct(User addCircle)
     {
         String latitude_user = addCircle.lat;
@@ -178,6 +181,7 @@ public class MyCircleFragment extends RootFragment
         return super.onOptionsItemSelected(item);
     }
 
+    // refresh my circle to see new update members
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);

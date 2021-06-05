@@ -1,8 +1,7 @@
 Student Name: Dang Khoa Pham (Kelvin)
 Student ID: 217528361
 
-Unit: SIT305
-Project: Assessment2 - Mobile App Project
+
 
 Githhub link: https://github.com/dangkhoapham31/Family-Tracking
 

@@ -30,8 +30,12 @@ import com.haroonstudios.familygpstracker.adapters.PagerAdapter;
 import com.haroonstudios.familygpstracker.fragments.HomeFragment;
 import com.haroonstudios.familygpstracker.utils.MyGDPR;
 
+import java.awt.Window;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static android.support.v4.content.ContextCompat.startActivity;
 
 public class HomeScreenActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -201,7 +205,7 @@ public class HomeScreenActivity extends AppCompatActivity implements NavigationV
         // case about me
         else if(id == R.id.nav_help)
         {
-            Uri uriFb = Uri.parse("https://www.facebook.com/MidouKhoa31"); // missing 'http://' will cause crashed
+            Uri uriFb = Uri.parse("https://www.facebook.com/MidouKhoa31"); // go to my Facebook
             Intent intent = new Intent(Intent.ACTION_VIEW, uriFb);
             startActivity(intent);
         }
